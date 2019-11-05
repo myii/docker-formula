@@ -4,6 +4,7 @@
 CentOS:
   pkgs:
     - python2-pip
+    - yum-plugin-versionlock
 
 FreeBSD:
   pkgs:

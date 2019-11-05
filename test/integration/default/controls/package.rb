@@ -5,7 +5,7 @@ control 'Docker package' do
 
   package_name =
     case platform[:family]
-    when 'debian'
+    when 'debian', 'redhat'
       'docker-ce'
     # Catch remaining `linux` platforms to identify by `name` at the end
     when 'linux'

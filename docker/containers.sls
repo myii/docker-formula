@@ -35,8 +35,13 @@ docker-container-startup-config-{{ name }}:
     - require:
       - cmd: docker-image-{{ name }}
 
+{%- set service_state = 'running' %}
+{%- if grains.os in ['CentOS'] and
+       salt['grains.get']('virtual_subtype', '') in ['Docker', 'LXC', 'kubernetes', 'libpod'] %}
+{%-   set service_state = 'dead' %}
+{%- endif %}
 docker-container-service-{{ name }}:
-  service.running:
+  service.{{ service_state }}:
     - name: docker-{{ name }}
     - enable: True
     - watch:
