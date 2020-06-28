@@ -156,7 +156,7 @@ suites:
       state_top:
         base:
           '*':
-            - docker
+            # - docker
             - docker.containers
       pillars:
         top.sls:
