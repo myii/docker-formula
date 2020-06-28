@@ -45,7 +45,8 @@ Debian:
 RedHat:
   pkgs:
     - python3-pip
-    - python3-docker
+    - python36-docker
+    - yum-plugin-versionlock
   repo:
     # yamllint disable-line rule:line-length
     url_base: https://download.docker.com/linux/{{ grains['os'] |lower }}/{{ '' if not 'osmajorrelease' in grains else grains['osmajorrelease'] }}/$basearch/stable/
