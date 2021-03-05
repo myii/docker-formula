@@ -7,6 +7,12 @@ name: 'Kitchen (Linux)'
 jobs:
   kitchen:
     runs-on: 'ubuntu-20.04'
+    env:
+      CHANGE_MINIKUBE_NONE_USER: true
+      MINIKUBE_WANTUPDATENOTIFICATION: false
+      MINIKUBE_WANTREPORTERRORPROMPT: false
+      MINIKUBE_HOME: '$HOME'
+      KUBECONFIG: '$HOME/.kube/config'
     strategy:
       fail-fast: false
       matrix:
