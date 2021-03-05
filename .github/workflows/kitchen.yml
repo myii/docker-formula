@@ -61,13 +61,13 @@ jobs:
           # - package-opensuse-tmbl-latest-master-py3
           # - clean-opensuse-tmbl-latest-master-py3
           # - archive-amazonlinux-2-master-py3
-          # - package-amazonlinux-2-master-py3
+          - package-amazonlinux-2-master-py3
           # - clean-amazonlinux-2-master-py3
           # - archive-oraclelinux-8-master-py3
-          - package-oraclelinux-8-master-py3
+          # - package-oraclelinux-8-master-py3
           # - clean-oraclelinux-8-master-py3
           # - archive-oraclelinux-7-master-py3
-          - package-oraclelinux-7-master-py3
+          # - package-oraclelinux-7-master-py3
           # - clean-oraclelinux-7-master-py3
           # - archive-gentoo-stage3-latest-master-py3
           # - package-gentoo-stage3-latest-master-py3
