@@ -24,7 +24,6 @@ OEL:
 Amazon:
   pkg:
     docker:
-      name: docker
       repo:
         baseurl: 'https://download.docker.com/linux/centos/7/$basearch/stable'
         file: '/etc/yum.repos.d/docker-ce.repo'
