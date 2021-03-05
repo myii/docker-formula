@@ -25,7 +25,10 @@ Amazon:
   pkg:
     docker:
       name: docker
-      repo: null
+      repo:
+        baseurl: 'https://download.docker.com/linux/centos/7/$basearch/stable'
+        file: '/etc/yum.repos.d/docker-ce.repo'
+        gpgkey: 'https://download.docker.com/linux/centos/gpg'
 
 Fedora:
   pkg:
