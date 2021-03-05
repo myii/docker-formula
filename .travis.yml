@@ -20,6 +20,14 @@ version: '~> 1.0'
 language: 'ruby'
 cache: 'bundler'
 
+env:
+  global:
+    - CHANGE_MINIKUBE_NONE_USER=true
+    - MINIKUBE_WANTUPDATENOTIFICATION=false
+    - MINIKUBE_WANTREPORTERRORPROMPT=false
+    - MINIKUBE_HOME=$HOME
+    - KUBECONFIG=$HOME/.kube/config
+
 ## Services config
 services:
   - docker
@@ -96,51 +104,67 @@ jobs:
     # - env: INSTANCE=archive-debian-10-master-py3
     # - env: INSTANCE=package-debian-10-master-py3
     # - env: INSTANCE=clean-debian-10-master-py3
+    - env: INSTANCE=debian-10-master-py3
     # - env: INSTANCE=archive-debian-9-master-py3
     # - env: INSTANCE=package-debian-9-master-py3
     # - env: INSTANCE=clean-debian-9-master-py3
+    - env: INSTANCE=debian-9-master-py3
     # - env: INSTANCE=archive-ubuntu-2004-master-py3
     # - env: INSTANCE=package-ubuntu-2004-master-py3
     # - env: INSTANCE=clean-ubuntu-2004-master-py3
+    - env: INSTANCE=ubuntu-2004-master-py3
     # - env: INSTANCE=archive-ubuntu-1804-master-py3
     # - env: INSTANCE=package-ubuntu-1804-master-py3
     # - env: INSTANCE=clean-ubuntu-1804-master-py3
+    - env: INSTANCE=ubuntu-1804-master-py3
     # - env: INSTANCE=archive-ubuntu-1604-master-py3
     # - env: INSTANCE=package-ubuntu-1604-master-py3
     # - env: INSTANCE=clean-ubuntu-1604-master-py3
+    - env: INSTANCE=ubuntu-1604-master-py3
     # - env: INSTANCE=archive-centos-8-master-py3
     # - env: INSTANCE=package-centos-8-master-py3
     # - env: INSTANCE=clean-centos-8-master-py3
+    - env: INSTANCE=centos-8-master-py3
     # - env: INSTANCE=archive-centos-7-master-py3
     # - env: INSTANCE=package-centos-7-master-py3
     # - env: INSTANCE=clean-centos-7-master-py3
+    - env: INSTANCE=centos-7-master-py3
     # - env: INSTANCE=archive-fedora-33-master-py3
     # - env: INSTANCE=package-fedora-33-master-py3
     # - env: INSTANCE=clean-fedora-33-master-py3
+    - env: INSTANCE=fedora-33-master-py3
     # - env: INSTANCE=archive-fedora-32-master-py3
     # - env: INSTANCE=package-fedora-32-master-py3
     # - env: INSTANCE=clean-fedora-32-master-py3
+    - env: INSTANCE=fedora-32-master-py3
     # - env: INSTANCE=archive-opensuse-leap-152-master-py3
     # - env: INSTANCE=package-opensuse-leap-152-master-py3
     # - env: INSTANCE=clean-opensuse-leap-152-master-py3
+    - env: INSTANCE=opensuse-leap-152-master-py3
     # - env: INSTANCE=archive-opensuse-tmbl-latest-master-py3
     # - env: INSTANCE=package-opensuse-tmbl-latest-master-py3
-    # - env: INSTANCE=clean-opensuse-tmbl-latest-master-py3
-    # - env: INSTANCE=archive-amazonlinux-2-master-py3
+    - env: INSTANCE=clean-opensuse-tmbl-latest-master-py3
+    # - env: INSTANCE=opensuse-tmbl-latest-master-py3
+    - env: INSTANCE=archive-amazonlinux-2-master-py3
     # - env: INSTANCE=package-amazonlinux-2-master-py3
     # - env: INSTANCE=clean-amazonlinux-2-master-py3
-    # - env: INSTANCE=archive-oraclelinux-8-master-py3
+    # - env: INSTANCE=amazonlinux-2-master-py3
+    - env: INSTANCE=archive-oraclelinux-8-master-py3
     # - env: INSTANCE=package-oraclelinux-8-master-py3
     # - env: INSTANCE=clean-oraclelinux-8-master-py3
-    # - env: INSTANCE=archive-oraclelinux-7-master-py3
+    # - env: INSTANCE=oraclelinux-8-master-py3
+    - env: INSTANCE=archive-oraclelinux-7-master-py3
     # - env: INSTANCE=package-oraclelinux-7-master-py3
     # - env: INSTANCE=clean-oraclelinux-7-master-py3
+    # - env: INSTANCE=oraclelinux-7-master-py3
     # - env: INSTANCE=archive-gentoo-stage3-latest-master-py3
     # - env: INSTANCE=package-gentoo-stage3-latest-master-py3
     # - env: INSTANCE=clean-gentoo-stage3-latest-master-py3
-    # - env: INSTANCE=archive-gentoo-stage3-systemd-master-py3
+    # - env: INSTANCE=gentoo-stage3-latest-master-py3
+    - env: INSTANCE=archive-gentoo-stage3-systemd-master-py3
     # - env: INSTANCE=package-gentoo-stage3-systemd-master-py3
     # - env: INSTANCE=clean-gentoo-stage3-systemd-master-py3
+    # - env: INSTANCE=gentoo-stage3-systemd-master-py3
     # - env: INSTANCE=archive-debian-10-3002-2-py3
     # - env: INSTANCE=archive-debian-9-3002-2-py3
     # - env: INSTANCE=archive-ubuntu-2004-3002-2-py3
@@ -158,6 +182,7 @@ jobs:
     # - env: INSTANCE=archive-arch-base-latest-3002-2-py3
     # - env: INSTANCE=package-arch-base-latest-3002-2-py3
     # - env: INSTANCE=clean-arch-base-latest-3002-2-py3
+    - env: INSTANCE=arch-base-latest-3002-2-py3
     # - env: INSTANCE=archive-gentoo-stage3-latest-3002-2-py3
     # - env: INSTANCE=archive-gentoo-stage3-systemd-3002-2-py3
     # - env: INSTANCE=archive-debian-10-3001-4-py3
