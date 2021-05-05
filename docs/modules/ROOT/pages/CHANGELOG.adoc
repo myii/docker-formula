@@ -1,0 +1,289 @@
+= Changelog
+
+:sectnums!:
+
+== link:++https://github.com/saltstack-formulas/docker-formula/compare/v2.0.2...v2.0.3++[2.0.3^] (2021-04-23)
+
+=== Bug Fixes
+
+* *config:* remove daemon.json in clean states
+(https://github.com/saltstack-formulas/docker-formula/commit/6967a98eb5219370996b6091f81eace56870174a[6967a98^])
+
+=== Continuous Integration
+
+* *kitchen+gitlab:* adjust matrix to add `3003` [skip ci]
+(https://github.com/saltstack-formulas/docker-formula/commit/2c7fe1ad322667664eb38782bd95a311c3c387cf[2c7fe1a^])
+
+== link:++https://github.com/saltstack-formulas/docker-formula/compare/v2.0.1...v2.0.2++[2.0.2^] (2021-04-22)
+
+=== Bug Fixes
+
+* *config:* remove block comment from daemon file
+(https://github.com/saltstack-formulas/docker-formula/commit/d075a0f926f5f17bee3932f4fe48f9b4627ad899[d075a0f^])
+
+== link:++https://github.com/saltstack-formulas/docker-formula/compare/v2.0.0...v2.0.1++[2.0.1^] (2021-04-21)
+
+=== Bug Fixes
+
+* *config:* remove empty daemon.json
+(https://github.com/saltstack-formulas/docker-formula/commit/3631fdb2cc6ed50d26f6ffd9cb9bccf31edaf5d5[3631fdb^])
+* *config:* revert previous changes in file.sls
+(https://github.com/saltstack-formulas/docker-formula/commit/1cdfb57b6bbbc2f13c1877b71fcd18fc1274518b[1cdfb57^])
+* *config:* write config dictionary to daemon.json
+(https://github.com/saltstack-formulas/docker-formula/commit/0e6febc5f104f5d6de232bf0d49226b53c1a8644[0e6febc^])
+* *config:* write config dictionary to daemon.json
+(https://github.com/saltstack-formulas/docker-formula/commit/413cf58b4f283af4d3a3aa8595e21fd56828d310[413cf58^])
+* *config:* write daemon_config dictionary to daemon.json
+(https://github.com/saltstack-formulas/docker-formula/commit/4af9866f04632a0bcad8ce930ef85f219559693f[4af9866^])
+* *config:* write daemon_config dictionary to daemon.json
+(https://github.com/saltstack-formulas/docker-formula/commit/ea2505b98871c1da8f7fff1a801157d1cee14ac5[ea2505b^])
+* *python-docker:* install with pip
+(https://github.com/saltstack-formulas/docker-formula/commit/7d73e8aca45e2e1e95ace6add1f665271519840c[7d73e8a^])
+
+== link:++https://github.com/saltstack-formulas/docker-formula/compare/v1.1.2...v2.0.0++[2.0.0^] (2021-04-16)
+
+=== Bug Fixes
+
+* *service:* change default service name
+(https://github.com/saltstack-formulas/docker-formula/commit/f8f96f1fab80e9edb6e2e86d4df310dc312bf9bb[f8f96f1^])
+
+=== Tests
+
+* standardise use of `share` suite & `_mapdata` state [skip ci]
+(https://github.com/saltstack-formulas/docker-formula/commit/69d7e65e9f5b6982e758ab0e04d177b16ebd2d7c[69d7e65^])
+* *service:* enable for `archive` and `package` suites
+(https://github.com/saltstack-formulas/docker-formula/commit/c168ee110e80c993869ec38cab6a16782ea60fef[c168ee1^])
+
+=== BREAKING CHANGES
+
+* *service:* due changes in default service name, on systems where
+'archive' installation method is used, duplicate service will be
+created. This can be avoided by updating pillar with
+'docker:pkg:docker:service:name: dockerd'. Due fact that 'archive'
+method is default this change may affect a large number of users
+
+== link:++https://github.com/saltstack-formulas/docker-formula/compare/v1.1.1...v1.1.2++[1.1.2^] (2021-03-10)
+
+=== Bug Fixes
+
+* *osmap:* use CentOS settings as basis for Oracle & Amazon Linux
+(https://github.com/saltstack-formulas/docker-formula/commit/28d40b3082f8309f828aa60224c715024bbe53af[28d40b3^])
+
+=== Code Refactoring
+
+* *map files:* cleanup and small fixes
+(https://github.com/saltstack-formulas/docker-formula/commit/f839b0664c82c544359ec367a7379cf2d6085aa4[f839b06^])
+
+=== Continuous Integration
+
+* *commitlint:* ensure `upstream/master` uses main repo URL [skip ci]
+(https://github.com/saltstack-formulas/docker-formula/commit/648666d0590960f0f2a513c219ac7405bab62eb5[648666d^])
+* *gemfile+lock:* use `ssf` customised `kitchen-docker` repo [skip ci]
+(https://github.com/saltstack-formulas/docker-formula/commit/d88eac16001c45c1c5314fc58ddf70fd7fadb73f[d88eac1^])
+* *github/kitchen:* use GitHub Actions for Linux testing [skip ci]
+(https://github.com/saltstack-formulas/docker-formula/commit/1febf87eb0b135914f7d0fac77381f52121cab28[1febf87^])
+* *gitlab-ci:* add `rubocop` linter (with `allow_failure`) [skip ci]
+(https://github.com/saltstack-formulas/docker-formula/commit/a5b95c01377db3ab9f63210234ac19aa51043c88[a5b95c0^])
+* *kitchen+ci:* use latest pre-salted images (after CVE) [skip ci]
+(https://github.com/saltstack-formulas/docker-formula/commit/2e15ae3eff47dd19b153dac440a323cbbacfd5d5[2e15ae3^])
+* *pre-commit:* update hook for `rubocop` [skip ci]
+(https://github.com/saltstack-formulas/docker-formula/commit/8624eb06f0847e64743b5e8cb398d0ac3ad930b1[8624eb0^])
+
+== link:++https://github.com/saltstack-formulas/docker-formula/compare/v1.1.0...v1.1.1++[1.1.1^] (2020-12-18)
+
+=== Bug Fixes
+
+* *compose-ng:* add support for setting container devices
+(https://github.com/saltstack-formulas/docker-formula/commit/2b04ee788e047a5283703199afea9e007f9d9c1e[2b04ee7^])
+
+== link:++https://github.com/saltstack-formulas/docker-formula/compare/v1.0.0...v1.1.0++[1.1.0^] (2020-12-18)
+
+=== Bug Fixes
+
+* *clean:* correct package name
+(https://github.com/saltstack-formulas/docker-formula/commit/58efc33adb4f9ca0bee8b33b8c9ba7da6b787b40[58efc33^])
+* *repo:* correct typo and explicit null-check
+https://github.com/saltstack-formulas/docker-formula/issues/258[#258^]
+(https://github.com/saltstack-formulas/docker-formula/commit/f5ec91120eb1dbdc121c2b0faa54f0dfb81ecaea[f5ec911^])
+* *typo:* refresh not refrsh
+(https://github.com/saltstack-formulas/docker-formula/commit/f823af2ae91dd35237539bb953263e23a129a020[f823af2^])
+* *windows:* pip install docker
+(https://github.com/saltstack-formulas/docker-formula/commit/b74bc086864c1889de50da3d8a6376e104257ab2[b74bc08^])
+
+=== Continuous Integration
+
+* *gitlab-ci:* use GitLab CI as Travis CI replacement
+(https://github.com/saltstack-formulas/docker-formula/commit/ab48dcdf0a8943941e7cf2044fef099d6bc1b29b[ab48dcd^])
+
+=== Features
+
+* *arm64:* add support for Raspberry Pi 4 running Ubuntu 20.04
+(https://github.com/saltstack-formulas/docker-formula/commit/228ca0739711bdc280ed32a76e12501ccd4ea46b[228ca07^])
+* *proxy:* allow setting proxy in systemd
+(https://github.com/saltstack-formulas/docker-formula/commit/ebeb2fe0332d91234f0bf78ae8b800ad694604b9[ebeb2fe^])
+
+== link:++https://github.com/saltstack-formulas/docker-formula/compare/v0.44.0...v1.0.0++[1.0.0^] (2020-11-18)
+
+=== Bug Fixes
+
+* *cent7:* install yum-plugin-versionlock too
+(https://github.com/saltstack-formulas/docker-formula/commit/3b2e2377a5f1160ca6dcfdf3bfca344f9d596b1f[3b2e237^])
+* *clean:* do not remove python package
+(https://github.com/saltstack-formulas/docker-formula/commit/e7ee8809c94a56b06b7829b221a930c1bf5d7718[e7ee880^])
+* *pillar.example:* fix `yamllint` violation [skip ci]
+(https://github.com/saltstack-formulas/docker-formula/commit/31087afced764593b5758363d2e5b5f6382c68ea[31087af^]),
+closes
+https://github.com/saltstack-formulas/docker-formula/issues/250[#250^]
+* *state:* corrected remove state
+(https://github.com/saltstack-formulas/docker-formula/commit/e1782434e37778e365302c6c304bc357a54bd4b2[e178243^])
+
+=== Code Refactoring
+
+* *rewrite:* modernize formula and fresh start
+(https://github.com/saltstack-formulas/docker-formula/commit/1e48667188cbaac5497fcdb5c652f0a6dd3257ee[1e48667^]),
+closes
+https://github.com/saltstack-formulas/docker-formula/issues/252[#252^]
+https://github.com/saltstack-formulas/docker-formula/issues/249[#249^]
+https://github.com/saltstack-formulas/docker-formula/issues/243[#243^]
+https://github.com/saltstack-formulas/docker-formula/issues/236[#236^]
+https://github.com/saltstack-formulas/docker-formula/issues/234[#234^]
+https://github.com/saltstack-formulas/docker-formula/issues/219[#219^]
+https://github.com/saltstack-formulas/docker-formula/issues/202[#202^]
+https://github.com/saltstack-formulas/docker-formula/issues/191[#191^]
+https://github.com/saltstack-formulas/docker-formula/issues/190[#190^]
+https://github.com/saltstack-formulas/docker-formula/issues/160[#160^]
+https://github.com/saltstack-formulas/docker-formula/issues/95[#95^]
+https://github.com/saltstack-formulas/docker-formula/issues/85[#85^]
+https://github.com/saltstack-formulas/docker-formula/issues/74[#74^]
+https://github.com/saltstack-formulas/docker-formula/issues/251[#251^]
+https://github.com/saltstack-formulas/docker-formula/issues/253[#253^]
+
+=== Continuous Integration
+
+* *kitchen:* use `saltimages` Docker Hub where available [skip ci]
+(https://github.com/saltstack-formulas/docker-formula/commit/1755f38fd9d8b895bfe8eac429fa62e48ed51697[1755f38^])
+* *pre-commit:* add to formula [skip ci]
+(https://github.com/saltstack-formulas/docker-formula/commit/d04e24a6e8f819c5d808e6c30f8fac3356ad1d0b[d04e24a^])
+* *pre-commit:* enable/disable `rstcheck` as relevant [skip ci]
+(https://github.com/saltstack-formulas/docker-formula/commit/8454e4ad4476c8e7e6dd7af4197f787fb9d987ad[8454e4a^])
+* *pre-commit:* finalise `rstcheck` configuration [skip ci]
+(https://github.com/saltstack-formulas/docker-formula/commit/87c737cb6fc2c7d7d4268f23f1fb074a580c653b[87c737c^])
+* *travis:* add notifications => zulip [skip ci]
+(https://github.com/saltstack-formulas/docker-formula/commit/6222d60ad2883b89f901198947f5061e4a10ab43[6222d60^])
+
+=== Documentation
+
+* *macos:* updated pillar.example & macos hash
+(https://github.com/saltstack-formulas/docker-formula/commit/fc011b38fa44e441586961cc7c051c008bfe66e5[fc011b3^])
+* *readme:* fix macos clean state
+(https://github.com/saltstack-formulas/docker-formula/commit/fca7fea55aba95e0f139128cde97ca2f5c133919[fca7fea^])
+
+=== BREAKING CHANGES
+
+* *rewrite:* This version is not backwards compatible. Update your
+states and pillar data to align with new formula.
+** MacOS was not tested in this PR but hopefully no regression.
+** docker.containers: sls was simplified (raise PR if regression)
+
+== link:++https://github.com/saltstack-formulas/docker-formula/compare/v0.43.1...v0.44.0++[0.44.0^] (2020-05-15)
+
+=== Continuous Integration
+
+* *gemfile.lock:* add to repo with updated `Gemfile` [skip ci]
+(https://github.com/saltstack-formulas/docker-formula/commit/c3dd00a2472eb092761419a88eeb0fa29117d97a[c3dd00a^])
+* *kitchen+travis:* remove `master-py2-arch-base-latest` [skip ci]
+(https://github.com/saltstack-formulas/docker-formula/commit/df9021232563c8fe4583c2faee48f8f1d17c3562[df90212^])
+* *workflows/commitlint:* add to repo [skip ci]
+(https://github.com/saltstack-formulas/docker-formula/commit/87a62cd8fb42b5561ad2ec12cfdba7b342f81359[87a62cd^])
+
+=== Features
+
+* *compose-ng:* support working_dir, volume_driver, userns_mode & user
+(https://github.com/saltstack-formulas/docker-formula/commit/30ec6ab02bd0265e90b12bcc367b7334bf536a4a[30ec6ab^])
+
+== link:++https://github.com/saltstack-formulas/docker-formula/compare/v0.43.0...v0.43.1++[0.43.1^] (2020-04-08)
+
+=== Bug Fixes
+
+* *compose-ng:* fix ports, volumes, restart policy, add privileged mode
+(https://github.com/saltstack-formulas/docker-formula/commit/f62a45cd0e1aea91eed27dac1724090ef18aceea[f62a45c^])
+* avoid setting multiple pre-start stanzas in upstart
+(https://github.com/saltstack-formulas/docker-formula/commit/80a2a985e96b2d7c9867660f15a5e7a9808ee156[80a2a98^])
+
+=== Continuous Integration
+
+* *kitchen:* avoid using bootstrap for `master` instances [skip ci]
+(https://github.com/saltstack-formulas/docker-formula/commit/27b509e696e06b9ea244170608f348f841ebb36c[27b509e^])
+
+== link:++https://github.com/saltstack-formulas/docker-formula/compare/v0.42.0...v0.43.0++[0.43.0^] (2020-01-22)
+
+=== Bug Fixes
+
+* *release.config.js:* use full commit hash in commit link [skip ci]
+(https://github.com/saltstack-formulas/docker-formula/commit/01ece3dba8e581b15da1087c58b484b56177f0de[01ece3d^])
+
+=== Continuous Integration
+
+* *gemfile:* restrict `train` gem version until upstream fix [skip ci]
+(https://github.com/saltstack-formulas/docker-formula/commit/734d4e3a884253ecc0f37493b0af6cf2398dbac0[734d4e3^])
+* *kitchen:* use `debian-10-master-py3` instead of `develop` [skip ci]
+(https://github.com/saltstack-formulas/docker-formula/commit/d87e7871989b56293b577976c122c6c7095d61e3[d87e787^])
+* *kitchen:* use `develop` image until `master` is ready (`amazonlinux`)
+ [skip ci]
+(https://github.com/saltstack-formulas/docker-formula/commit/71c5bcb0aead53192ec4bb9f560ed312c80af1f6[71c5bcb^])
+* *kitchen+travis:* upgrade matrix after `2019.2.2` release [skip ci]
+(https://github.com/saltstack-formulas/docker-formula/commit/2189efbc8af5fa6a529acbe3410b62558132a044[2189efb^])
+* *travis:* apply changes from build config validation [skip ci]
+(https://github.com/saltstack-formulas/docker-formula/commit/f0a07fc7c03107b21dd9f7161972b084893f19ee[f0a07fc^])
+* *travis:* opt-in to `dpl v2` to complete build config validation [skip
+ci]
+(https://github.com/saltstack-formulas/docker-formula/commit/340556e081780d890db064dc84d7fdd177e55d93[340556e^])
+* *travis:* quote pathspecs used with `git ls-files` [skip ci]
+(https://github.com/saltstack-formulas/docker-formula/commit/12bf914e2468ce8b09f172c12c5df8aa4b7175e5[12bf914^])
+* *travis:* run `shellcheck` during lint job [skip ci]
+(https://github.com/saltstack-formulas/docker-formula/commit/ba127a08113bf43f3bbb7691d1bc670e659e4c45[ba127a0^])
+* *travis:* use `major.minor` for `semantic-release` version [skip ci]
+(https://github.com/saltstack-formulas/docker-formula/commit/2590d61eeadb82ae420db450f3885b95a77be52c[2590d61^])
+* *travis:* use build config validation (beta) [skip ci]
+(https://github.com/saltstack-formulas/docker-formula/commit/fe184e95123ad90c2a38515a50118f5ab82cac1b[fe184e9^])
+
+=== Features
+
+* support optional container removal before start in upstart/systemd
+(https://github.com/saltstack-formulas/docker-formula/commit/cc10d97ee0a8f85f8d94f6ec4b1918c906338afd[cc10d97^])
+
+=== Performance Improvements
+
+* *travis:* improve `salt-lint` invocation [skip ci]
+(https://github.com/saltstack-formulas/docker-formula/commit/18fa79879dbb37c90c45c836018126dfbd61f5e2[18fa798^])
+
+== link:++https://github.com/saltstack-formulas/docker-formula/compare/v0.41.0...v0.42.0++[0.42.0^] (2019-10-23)
+
+=== Bug Fixes
+
+* *compose-ng.sls:* fix `salt-lint` errors
+(https://github.com/saltstack-formulas/docker-formula/commit/9e8e1e8[9e8e1e8^])
+* *pillar.example:* ensure `docker.config` is available
+(https://github.com/saltstack-formulas/docker-formula/commit/dce112a[dce112a^])
+
+=== Continuous Integration
+
+* *travis:* update `salt-lint` config for `v0.0.10`
+(https://github.com/saltstack-formulas/docker-formula/commit/3eaed1b[3eaed1b^])
+
+=== Documentation
+
+* *readme:* move to `docs/` directory and modify accordingly
+(https://github.com/saltstack-formulas/docker-formula/commit/222fc6d[222fc6d^])
+
+=== Features
+
+* *semantic-release:* implement for this formula
+(https://github.com/saltstack-formulas/docker-formula/commit/ea6be11[ea6be11^])
+
+=== Tests
+
+* *inspec:* add tests for package, config & service
+(https://github.com/saltstack-formulas/docker-formula/commit/451d76d[451d76d^])
+* *testinfra:* remove from the formula
+(https://github.com/saltstack-formulas/docker-formula/commit/62122d2[62122d2^])
